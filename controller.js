@@ -24,7 +24,7 @@ const handlePostCampaign = async function (req, res) {
         const campaignDoc = await campaignModel.create({
             title,
             message,
-            scheduledTime: new Date(scheduledTime),
+            scheduledTime: new Date(nd),
             recipients: arr
         });
 
