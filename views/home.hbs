@@ -1,0 +1,104 @@
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fdfdfd;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  }
+
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #444;
+  }
+
+  input[type="text"],
+  input[type="datetime-local"],
+  textarea {
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  textarea {
+    resize: vertical;
+    height: 120px;
+  }
+
+  button {
+    margin-top: 20px;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  .error {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .link {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .link a {
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  .link a:hover {
+    text-decoration: underline;
+  }
+</style>
+
+{{#if error}}
+  <p class="error">{{error}}</p>
+{{/if}}
+
+<form action="/create/campaign" method="POST">
+  <label for="title">Title:</label>
+  <input type="text" id="title" name="title" required>
+
+  <label for="message">Message:</label>
+  <textarea id="message" name="message" required></textarea>
+
+  <label for="scheduledTime">Scheduled Time (IST):</label>
+  <input type="datetime-local" id="scheduledTime" name="scheduledTime" required>
+
+  <label for="recipients">Recipients (comma separated):</label>
+  <input type="text" id="recipients" name="recipients" required>
+
+  <button type="submit">Create Campaign</button>
+</form>
+
+<div class="link">
+  <a href="/campaigns">📋 View All Campaigns</a>
+</div>

@@ -1,0 +1,16 @@
+<h2>All Campaigns</h2>
+{{#each campaigns}}
+  <div style="border: 1px solid #ccc; padding: 10px; margin: 10px;">
+    <h3>{{title}}</h3>
+    <p><strong>Message:</strong> {{message}}</p>
+    <p><strong>Scheduled:</strong> {{scheduledTime}}</p>
+    <p><strong>Recipients:</strong></p>
+    <ul>
+      {{#each recipients}}
+        <li>{{email}} - {{status}}</li>
+      {{/each}}
+    </ul>
+  </div>
+{{/each}}
+
+<a href="/">← Create Another Campaign</a>
