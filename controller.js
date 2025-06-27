@@ -20,7 +20,7 @@ const handlePostCampaign = async function (req, res) {
         const campaignDoc = await campaignModel.create({
             title,
             message,
-            scheduledTime: new Date(scheduledTime),
+            scheduledTime: new Date(scheduledTime + "+5:30"),
             recipients: arr
         });
 
