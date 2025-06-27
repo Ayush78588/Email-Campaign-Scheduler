@@ -27,7 +27,7 @@ Users can schedule email campaigns to be sent at a future time to multiple recip
 
 ## ⚙️ Setup Instructions
 ### 1. Clone the repository
-git clone https://github.com/your-username/email-campaign-scheduler.git
+git clone https://github.com/Ayush78588/Email-Campaign-Scheduler.git
 cd email-campaign-scheduler
 
 ### 2. Install dependencies
