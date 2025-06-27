@@ -24,7 +24,6 @@ async function sendEmail(data) {
     }
     try {
         let info = await transporter.sendMail(obj);
-        console.log(info);
         return true;
     }
     catch (err) {

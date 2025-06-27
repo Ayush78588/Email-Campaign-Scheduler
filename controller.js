@@ -15,7 +15,11 @@ const handlePostCampaign = async function (req, res) {
             .map((email) => {
                 return { email, status: 'pending' }
             });
-        console.log(arr);
+        console.log(scheduledTime, typeof scheduledTime);
+        let x = scheduledTime + '+05:30';
+        let nd = new Date(x);
+        console.log(nd);
+        console.log(x);
 
         const campaignDoc = await campaignModel.create({
             title,
