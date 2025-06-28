@@ -37,11 +37,12 @@ npm install
 cp .env.sample .env
 
 ### 4. Open the .env file in editor and fill:
- PORT=5000
- EMAIL_ID=youremail@gmail.com
- PASSWORD=your-app-password
- MONGODB_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/your-db
-
+```env
+PORT=5000
+EMAIL_ID=youremail@gmail.com
+PASSWORD=your-app-password
+MONGODB_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/your-db
+```
  5. Start the application
 node server.js
 
