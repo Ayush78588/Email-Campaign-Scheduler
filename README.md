@@ -43,7 +43,7 @@ EMAIL_ID=youremail@gmail.com
 PASSWORD=your-app-password
 MONGODB_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/your-db
 ```
- 5. Start the application
+### 5. Start the application
 node server.js
 
 ### 6. Visit the app
